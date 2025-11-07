@@ -36,7 +36,7 @@ jobs:
       - name: Add organization repository as remote
         run: |
           git remote remove target || true
-          git remote add target https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/umbrella-in-sun-007/terraform-docker-single-tier-app.git
+          git remote add target https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/umbrella-in-sun-007/terraform-docker-two-tier-app.git
 
       - name: Push main branch to organization repository
         run: |
