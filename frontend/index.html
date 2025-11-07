@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terraform Docker 2-Tier App</title>
+</head>
+<body>
+  <h1>Frontend - Served by Nginx</h1>
+  <p>Connected to Flask backend at <code>/api</code></p>
+  <script>
+    fetch('http://backend:5000/api')
+      .then(r => r.json())
+      .then(data => document.body.insertAdjacentHTML('beforeend', `<p>${data.message}</p>`))
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
